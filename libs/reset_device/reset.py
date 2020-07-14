@@ -23,7 +23,7 @@ if reboot_required == True:
 
 # This is the main logic loop waiting for a button to be pressed on GPIO 18 for 10 seconds.
 # If that happens the device will reset to its AP Host mode allowing for reconfiguration on a new network.
-while True:
+'''while True:
     while GPIO.input(18) == 1:
         time.sleep(1)
         counter = counter + 1
@@ -38,3 +38,4 @@ while True:
             break
 
     time.sleep(1)
+'''
