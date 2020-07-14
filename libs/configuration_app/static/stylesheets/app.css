@@ -37,6 +37,7 @@ div#mainContent{
 }
 
 h1, h2 {
+    font-family: 'TolyerNo4-Regular';
     margin:0 0 .5em 0;
     font-size:3rem;
 }
