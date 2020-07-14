@@ -1,5 +1,16 @@
 /* General
 ---------------------------------------------------------*/
+/* @font-face {
+  font-family: 'TolyerNo4-Regular';
+  src: url('/TolyerNo4-Regular/font.woff2') format('woff2'), url('/TolyerNo4-Regular/font.woff') format('woff');
+} */
+@font-face {
+  font-family: 'TolyerNo4-Regular';
+  src: url("{{ url_for('static', filename='stylesheets/TolyerNo4-Regular/font.woff2') }}") format('woff2'), url("{{ url_for('static', filename='stylesheets/TolyerNo4-Regular/font.woff') }}") format('woff');
+}
+
+
+
 *, :after, :before {
 box-sizing: border-box;
 }
@@ -10,14 +21,14 @@ padding:0;
 }
 
 body{
-    background-color: #000;
+    background-color: #101010;
     margin:0;
     color: white;
 }
 
 div#mainContent{
     padding:.3em;
-    background-color: #000;
+    background-color: #101010;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -25,9 +36,12 @@ div#mainContent{
     color: #fff;
 }
 
-div#mainContent h1 {
+h1, h2 {
     margin:0 0 .5em 0;
     font-size:3rem;
+}
+h2 {
+    font-size: 2rem;
 }
 
 div#mainContent ul{
@@ -55,7 +69,7 @@ div#wpaStatus a{
 
 label[for=ssid],
 label[for=wifi_key]{
-    font-size:1.9rem;
+    font-size:1.5rem;
 }
 
 /* Select
@@ -76,7 +90,7 @@ li.wifiNetwork:after {
     content: '▼';
     position: absolute;
     width: 25px;
-    color: #deab04;
+    color: #fff;
     font-weight: bold;
     font-size: 1.4rem;
     right: 0px;
@@ -117,8 +131,9 @@ select.wifiNetworkInputs {
     width: 100%;
     margin:2em 0;
     padding:.5em;
-    background-color: #deab04;
-    font-size: 2rem;
+    background-color: #000;
+    border: 1px solid #fff;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -170,7 +185,10 @@ div#saveCredentialsOutput{
 
 @media (min-width: 800px) {
     div#mainContent h1 {
-        font-size:4.5rem;
+        font-size:4rem;
+    }
+    div#mainContent h2 {
+        font-size:3rem;
     }
     div#mainContent {
         max-width:768px;
