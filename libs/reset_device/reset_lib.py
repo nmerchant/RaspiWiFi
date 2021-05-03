@@ -47,13 +47,16 @@ def wpa_check_activate(wpa_enabled, wpa_key):
 def update_ssid(ssid_prefix, deeplight_id):
 	reboot_required = False
 	ssid_correct = False
+	id_correct = False
 
 	with open('/etc/hostapd/hostapd.conf') as hostapd_conf:
 		for line in hostapd_conf:
 			if ssid_prefix in line:
 				ssid_correct = True
+			if deeplight_id in line:
+				id_correct = True
 
-	if ssid_correct == False:
+	if ssid_correct == False or id_correct == False:
 		with fileinput.FileInput("/etc/hostapd/hostapd.conf", inplace=True) as file:
 			for line in file:
 				if 'ssid=' in line:
