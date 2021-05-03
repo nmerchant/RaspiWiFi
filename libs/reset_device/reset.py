@@ -4,9 +4,6 @@ import time
 import subprocess
 import reset_lib
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-
 counter = 0
 deeplight_id = subprocess.check_output(['cat', '/home/pi/deeplight.config'])[-5:-1].decode('utf-8')
 config_hash = reset_lib.config_file_hash()
