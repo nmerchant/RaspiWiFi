@@ -3,3 +3,4 @@ driver=nl80211
 ssid=temp-ssid
 channel=40
 hw_mode=a
+country_code=US
