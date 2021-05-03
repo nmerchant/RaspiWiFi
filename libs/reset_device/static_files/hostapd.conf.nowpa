@@ -1,6 +1,6 @@
 interface=wlan0
 driver=nl80211
-ssid=temp-ssid
+ssid=temp-DeepLight 12 Setup
 channel=40
 hw_mode=a
 country_code=US
